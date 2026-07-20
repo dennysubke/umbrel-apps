@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ghostfolio
 category: finance
 name: Ghostfolio
-version: "3.27.0"
+version: "3.30.0"
 tagline: Manage your wealth like a boss
 description: >-
   Ghostfolio is a privacy-first, open source dashboard for your personal finances.
@@ -34,12 +34,13 @@ deterministicPassword: false
 torOnly: false
 releaseNotes: >-
   This release includes improvements and fixes:
-    - Hardened validation for logo endpoint URLs
-    - Fixed symbol selection when cloning an activity
-    - Resolved a startup error in data gathering caused by uninitialized data provider mappings
-    - Improved error handling for HTML template middleware and Financial Modeling Prep quotes
+    - Added support for the Fear & Greed Index market mood in self-hosted environments
+    - Added support for converting asset profiles to the manual data source from the admin asset profile details dialog
+    - Improved copy-to-clipboard feedback and German localization
+    - Restricted the symbol data endpoint to authenticated users and removed the deprecated GET security-token login endpoint
+    - Fixed the delete button in tag selectors
 
 
-  Full release notes can be found at https://github.com/ghostfolio/ghostfolio/releases/tag/3.27.0
+  Full release notes can be found at https://github.com/ghostfolio/ghostfolio/releases/tag/3.30.0
 submitter: BeauAgst
 submission: https://github.com/getumbrel/umbrel-apps/pull/396
