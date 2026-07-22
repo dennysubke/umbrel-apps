@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   budibase:
-    image: budibase/budibase:3.39.31@sha256:527cecf4d71767e29e7d7bcc385b6a6a361204cceb217de1917c2c88531fe025
+    image: budibase/budibase:3.40.0@sha256:20a82e3a3553a09c401bc628c264f9663dd40748369356bbc842eff979f738f1
     restart: on-failure
     stop_grace_period: 1m
     volumes:
