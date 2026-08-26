@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   web:
-    image: ghcr.io/gamosoft/notediscovery:0.30.0@sha256:8f04067b59b07c523c195f9d36d3cacbdadce263a5427d5a4d4b1d30c3b58035
+    image: ghcr.io/gamosoft/notediscovery:0.31.4@sha256:e3484e5ecfcdad58313048badce322d090e03269d70301b3c2b3892055dcc021
     user: 1000:1000
     restart: on-failure
     volumes:

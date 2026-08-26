@@ -7,7 +7,7 @@ services:
       APP_PORT: 3334
 
   server:
-    image: ghostfolio/ghostfolio:3.38.0@sha256:2c2c6055bc53e8cdc8a3ddfea166ecb08f26b600e659fc5520aaa71e5e5e5dac
+    image: ghostfolio/ghostfolio:3.60.0@sha256:590756dd9bdf6ba79c7a5dd8443629845e74590441a6e3877085bebf8475ceaf
     init: true
     restart: on-failure
     environment:

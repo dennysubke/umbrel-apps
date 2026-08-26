@@ -8,7 +8,7 @@ services:
 
   # Official Hermes dashboard + messaging gateway supervised by upstream s6.
   web:
-    image: ghcr.io/getumbrel/hermes-agent-umbrel:v2026.7.30@sha256:9690d13fcf2f3040e4f2577c76aaae57f80441c010c77642e33aec3c3b304e25
+    image: ghcr.io/getumbrel/hermes-agent-umbrel:v2026.8.19@sha256:555a55ba4f75ce3cdb429fb0468f07bff7825ff1490f91a5b9d391b2c11a1d71
     restart: on-failure
     stop_grace_period: 1m
     volumes:

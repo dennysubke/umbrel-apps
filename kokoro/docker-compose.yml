@@ -7,6 +7,6 @@ services:
       APP_PORT: 8880
 
   web:
-    image: ghcr.io/remsky/kokoro-fastapi-cpu:v0.7.0@sha256:dcbd4098824dd914574eab2582cc7d515533bc681d06c1e0e511cfdeffcd9b46
+    image: ghcr.io/remsky/kokoro-fastapi-cpu:v0.8.1@sha256:28d6f0b6e4df369559012578299d201b855a08fac466f616653edd1f08c5370a
     user: "1000:1000"
     restart: on-failure

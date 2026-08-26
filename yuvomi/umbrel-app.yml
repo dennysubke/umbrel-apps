@@ -2,7 +2,7 @@ manifestVersion: 1
 id: yuvomi
 category: files
 name: Yuvomi
-version: "1.67.0"
+version: "2.44.0"
 tagline: Self-hosted family planner — calendar, tasks, shopping, meals & budget
 description: >-
   Yuvomi is a self-hosted, privacy-focused family planner that bundles everything
@@ -51,24 +51,39 @@ description: >-
   Open Yuvomi from your Umbrel dashboard and create the first account — that
   account becomes the family admin and can invite the rest of the household.
 releaseNotes: >-
-  Budget transactions, shared expenses, and settle-up payments can now carry
-  receipts. You can upload a new receipt or attach an existing document, and new
-  receipt uploads are saved under Documents only when the transaction is saved.
+  The Tasks module now keeps a history of what was completed. Until now a task
+  simply carried the state "done", and nothing recorded when that happened or
+  who did it - so questions like "what did I get through today", "when did we
+  last clean the bathroom" or "who took the bins out" had no answer anywhere. A
+  third view sits beside List and Board: what was ticked off, grouped by day,
+  newest first, with the household member and the time. You can narrow it to one
+  person, and tapping an entry opens the task itself.
 
-  Receipt attachments now respect the source document's visibility. Private
-  documents stay hidden from other household members even when attached to shared
-  Budget items, and editing a shared item no longer removes attachments you
-  cannot see.
 
-  Repeating meals can now have an end date, and deleting a repeating meal can
-  remove "this and all following" without deleting earlier meal history.
+  A repeating task also shows when it was last done, going back through the
+  whole series rather than just the copy currently open. That is the question a
+  weekly chore actually raises, and it is the one the old "done" flag could
+  never answer, because completing a repeating task creates a fresh copy each
+  time.
 
-  Budget, Kitchen, calendar sync target selection, iOS/iPadOS push notifications,
-  and several layout/accessibility details receive fixes and improvements.
+
+  The history starts empty, and that is expected. Recording begins with this
+  update - what your household ticked off before it was never written down
+  anywhere, so there is nothing to show yet. It fills up from the first task you
+  complete after updating.
+
+
+  The list respects who may see what, exactly as the task list does. A task kept
+  private stays out of everyone else's history, including after the fact: set a
+  task to private later, and it disappears from the history too.
+
+
+  Nothing needs configuring and there is nothing to do after the update - the
+  new table is created automatically on first start.
+
 
   Full release notes are available at
-  https://github.com/ulsklyc/yuvomi/compare/v1.63.0...v1.67.0
-
+  https://github.com/ulsklyc/yuvomi/releases/tag/v2.44.0
 backupIgnore:
   - data/app/yuvomi.db.plaintext-backup*
   - data/backups/*.db

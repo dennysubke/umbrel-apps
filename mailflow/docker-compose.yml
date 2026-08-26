@@ -6,7 +6,7 @@ services:
       APP_PORT: 80
 
   frontend:
-    image: ghcr.io/maathimself/mailflow-frontend:2.8.0@sha256:9699f81dc024250bed538d923d8a6f9b34cb62313f3effe11655ea11a506ef14
+    image: ghcr.io/maathimself/mailflow-frontend:3.2.4@sha256:eee53796b73cffbb49969918cb394bade1e248ff008bc9b8a0a32565ad56f428
     restart: on-failure
     stop_grace_period: 1m
     depends_on:
@@ -20,7 +20,7 @@ services:
       start_period: 20s
 
   backend:
-    image: ghcr.io/maathimself/mailflow-backend:2.8.0@sha256:ca6900beb7132fa018473db883a5589d27eeb532b57a961ba60c4f180aa7c384
+    image: ghcr.io/maathimself/mailflow-backend:3.2.4@sha256:68b1f93da40d1178bbb80cd178a5f6e174d7810145d056245e8d0de6f2305b4e
     restart: on-failure
     stop_grace_period: 1m
     environment:
@@ -41,6 +41,7 @@ services:
       VAPID_PUBLIC_KEY: ""
       VAPID_PRIVATE_KEY: ""
       VAPID_SUBJECT: ""
+      IMAP_MAX_PERSISTENT_PER_HOST: ""
     depends_on:
       postgres:
         condition: service_healthy

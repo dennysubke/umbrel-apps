@@ -2,7 +2,7 @@ manifestVersion: 1
 id: nocodb
 category: files
 name: NocoDB
-version: "2026.07.0"
+version: "2026.08.1"
 tagline: No-code platform for database management, self-hosted Airtable alternative
 description: >-
   NocoDB is an open-source platform that converts databases into smart, collaborative spreadsheets. It enables users to create no-code applications on top of databases like MySQL, PostgreSQL, SQLite, and even Airtable-like interfaces on existing data structures. 
@@ -31,16 +31,15 @@ description: >-
   🛡️ Permissions & Roles: NocoDB supports user roles, access controls, and permissions, making it suitable for team use.
 releaseNotes: >-
   New features and improvements in this release:
-    - Adds calendar sync for Google Calendar, Outlook, and CalDAV calendars on licensed self-hosted deployments
-    - Adds image annotations and comment-based workflow triggers for licensed self-hosted deployments
-    - Adds comment file attachments, comment-triggered webhooks, checksum formulas, localized date formatting, and sorted/limited Lookup values
-    - Improves calendar views with custom timescales, iCalendar exports, mobile rendering, event themes, and Jalali date formats
-    - Improves Excel imports, form conditions, expanded-record field descriptions, date input handling, and multi-select sorting
-    - Improves security around network access, data access controls, and input handling
-    - Improves self-hosted licensing behavior, expired trial fallback, image processing, local import/AI configuration options, and formula/data-source reliability
+    - Adds realtime presence in Grid views so collaborators can see where others are working
+    - Adds folders for grouping tables, documents, dashboards, and views
+    - Adds support for freezing multiple fields in Grid views
+    - Improves Interfaces with copied view settings, field sizing, dashboard permissions, and layout polish
+    - Improves API support for v3 records upsert link fields and currency-field schema details
+    - Fixes two-factor sign-in in the installed app, scheduled snapshot naming, rich text previews, AI response recovery, API field updates, link-field permissions, and interface permissions
 
 
-  Full release notes can be found at https://github.com/nocodb/nocodb/releases/tag/2026.07.0
+  Full release notes can be found at https://github.com/nocodb/nocodb/releases/tag/2026.08.1
 developer: NocoDB Inc.
 website: https://nocodb.com
 dependencies: []

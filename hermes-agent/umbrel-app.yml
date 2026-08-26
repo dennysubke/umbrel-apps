@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hermes-agent
 category: ai
 name: Hermes Agent
-version: "2026.7.30"
+version: "2026.8.19"
 tagline: The AI agent that grows with you
 description: >-
   Hermes Agent is an AI agent that gets better the more you use it by creating its own skills, storing user preferences, and updating its memory.
@@ -38,12 +38,12 @@ path: "/chat"
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  This patch release rolls up the latest Hermes Agent fixes and platform improvements since v2026.7.20, including gateway, voice, desktop app, installer, and Telegram media reliability fixes.
+  Hermes Agent v0.20.5 is a stable patch release that rolls up improvements since v0.20.4, including Bot Mode group-room threads, foldable conversation summaries, blob-face avatars, and PDF/file attachments with drag and drop.
 
 
-  It also includes continued work on Buzz and Nostr channels, FLUX3 video generation and delivery, and voice-mode regression fixes.
+  This update also adds keyless web-tier provider rotation, CLI improvements like the fuzzy /model picker and Ctrl+P command palette, runtime stall guards, persistent-memory cron jobs, and desktop performance improvements.
 
 
-  Full release notes can be found at https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30
+  Full release notes can be found at https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel-apps/pull/5376

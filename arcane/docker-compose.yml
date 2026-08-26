@@ -27,7 +27,7 @@ services:
       - ${APP_DATA_DIR}/data/docker:/data
 
   arcane:
-    image: ghcr.io/getarcaneapp/arcane:v2.6.0@sha256:2b7544497c99d766baaf204ed8d66e555352ef37714aab0b68b5713be0d204d3
+    image: ghcr.io/getarcaneapp/arcane:v2.9.0@sha256:f10f95d1123d7209956ac084b52486414c09ddca58199e211794f9f6bd136229
     depends_on:
       - docker
     restart: on-failure

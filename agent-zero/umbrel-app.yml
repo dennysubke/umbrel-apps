@@ -3,7 +3,7 @@ id: agent-zero
 name: Agent Zero
 tagline: A personal, organic agentic framework that grows and learns with you
 category: ai
-version: "v2.8"
+version: "v2.10"
 port: 3015
 description: >-
   Agent Zero is a personal, organic agentic framework that grows and learns with you.
@@ -37,18 +37,16 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Agent Zero v2.8 is a follow-up to the recent v2.0 major update. If you're updating from a pre-v2.0 version, Agent Zero recommends creating a backup from Settings > Check for Updates > Backup & Restore before upgrading, then checking chats, projects, memory, settings, and plugins after the update.
+  Agent Zero v2.10 is a follow-up to the recent v2.0 major update. If you're updating from a pre-v2.0 version, Agent Zero recommends creating a backup from Settings > Check for Updates > Backup & Restore before upgrading, then checking chats, projects, memory, settings, and plugins after the update.
 
 
   Important changes in this release:
-    - Adds a stop button and `/stop` API to cancel a running agent context without deleting it
-    - Adds versioned WebUI asset caching and service-worker preloading for faster page loads
-    - Adds WebUI extension-manifest support so enabled extensions can load their own UI files
-    - Adds chat-naming and pin-to-top plugins, a `/rename` slash command, lazy chat rendering, and message pagination improvements
-    - Improves the Files surface with drag-and-drop moves for files and folders
-    - Fixes native Responses tool output and metadata handling, slash-command picker behavior, warning replay, message collapsing, and obsolete preset API-key warnings
-    - Adds Codex OAuth response defaults and routes chat-only providers through Chat Completions by default
+    - Improves the internal browser with a shared persistent Chromium/Xvfb/Xpra runtime, authenticated interactive viewport, automatic tab restore, and bot-detection hardening
+    - Adds scoped composer references, per-chat composer draft restore, Goal mode shortcuts, and quieter reload handling for project- and agent-scoped plugin changes
+    - Improves Responses/Codex OAuth streaming recovery and subordinate agent lifecycle persistence
+    - Adds a bundled ACP session bridge plus standalone user API and authenticated user WebUI extension routes
+    - Fixes backup restores so destination allowed origins are preserved, and pins desktop runtime packages to known multi-architecture builds
 
 
-  Full release notes can be found at https://github.com/agent0ai/agent-zero/releases/tag/v2.8
+  Full release notes can be found at https://github.com/agent0ai/agent-zero/releases/tag/v2.10
 path: ""

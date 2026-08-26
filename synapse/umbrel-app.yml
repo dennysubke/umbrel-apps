@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: synapse
 category: social
 name: Synapse
-version: "1.157.2"
+version: "1.159.0"
 tagline: Matrix homeserver
 description: >-
   Synapse is an open source Matrix homeserver implementation, written and maintained by Element. Matrix is the open standard for secure and interoperable real time communications.
@@ -42,8 +42,8 @@ torOnly: false
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel/commit/c9f0975e766e79d4bd6adf4255cd081f54d654cb
 releaseNotes: >-
-  This security release fixes several high, moderate, and low severity vulnerabilities affecting Synapse homeservers.
+  This update improves media thumbnail generation for MPO images and falls back to static thumbnails when animations cannot be decoded.
 
-  Please update when you can, especially if your homeserver participates in open federation or has untrusted local users.
+  It also adds optional support for MSC4429 profile updates for legacy sync, fixes quarantined media replication when that stream is handled by a worker, and improves Docker log output when troubleshooting.
 
-  Full release notes can be found at https://github.com/element-hq/synapse/releases/tag/v1.157.2
+  Full release notes can be found at https://github.com/element-hq/synapse/releases/tag/v1.159.0
