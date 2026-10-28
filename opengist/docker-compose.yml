@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/thomiceli/opengist:1.15.1@sha256:038d47937d3ba4b49ec28a76d3966383e0a46acf7ee1f19b1bae4ac0758c694c
+    image: ghcr.io/thomiceli/opengist:1.15.3@sha256:f5dd39cc9409b4006f8b090e5f9ed042cdb736d28a06b4f985c674dacafc94d5
     user: "1000:1000"
     restart: on-failure
     ports:

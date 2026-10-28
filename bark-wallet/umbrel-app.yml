@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: bark-wallet
+storage:
+  dataRoot: data
 category: bitcoin
 name: Bark Wallet
-version: "0.6.0"
+version: "0.10.0"
 tagline: One wallet for Lightning, Ark, and on-chain
 description: >-
   Send and receive bitcoin across Lightning, Ark, and on-chain from a single, simple wallet. Bark Wallet is self-custodial with no channels to open or liquidity to manage. Just install the wallet and start making payments.
@@ -26,17 +28,28 @@ description: >-
 
   Proudly open source, built as a reference implementation for developers. Fork the code and ship your own.
 releaseNotes: >-
-  Changes:
-    - See the estimated fee before moving funds on-chain
-    - Copy raw transaction data from VTXO details
-    - Get clearer error messages when sending funds or using Emergency Exit
-    - Export your wallet database from Settings
-    - Updated the Bark wallet daemon to version 0.6.0
+  This update brings Bark 0.8.0 and improves balances, emergency exits, and transaction history.
+
+
+  - Added tag deletion from the tag picker
+
+  - Added amounts awaiting refresh, pending Ark sends, and pending offboards to the balance breakdown
+
+  - Swept VTXOs now finish their emergency exit, and exit fees are checked against confirmed on-chain funds
+
+  - Fixed older on-chain transactions jumping to the top of the history when opened in a new browser
+
+  - Fixed detail dialog scrolling and other small display issues
+
+  - Updated the Bark wallet daemon to version 0.8.0
+
+
+  Full release notes can be found at https://gitlab.com/ark-bitcoin/bark-web/-/releases/v0.10.0
 developer: Second
 website: https://second.tech
 dependencies: []
-repo: https://gitlab.com/ark-bitcoin/labs/bark-web
-support: https://gitlab.com/ark-bitcoin/labs/bark-web/-/issues
+repo: https://gitlab.com/ark-bitcoin/bark-web
+support: https://gitlab.com/ark-bitcoin/bark-web/-/issues
 port: 4004
 gallery:
   - 1.webp

@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: ghostfolio
+storage:
+  dataRoot: data
 category: finance
 name: Ghostfolio
-version: "3.60.0"
+version: "3.93.0"
 tagline: Manage your wealth like a boss
 description: >-
   Ghostfolio is a privacy-first, open source dashboard for your personal finances.
@@ -33,12 +35,12 @@ path: ""
 deterministicPassword: false
 torOnly: false
 releaseNotes: >-
-  This release includes improvements and fixes:
-    - Improved historical market data gathering by tracking carried-forward prices and retaining completed jobs for a 12-hour cooldown
-    - Improved admin tables for data providers, platforms, and tags
-    - Fixed repeated historical market data gathering for symbols without weekend market data
+  This update makes activity-type filtering and account allocation and quantity details available to everyone. It also fixes a race condition when saving account balances and improves the consistency and error handling of experimental AI-assisted activity imports.
 
 
-  Full release notes can be found at https://github.com/ghostfolio/ghostfolio/releases/tag/3.60.0
+  Existing MCP access with permission to create activities also gains permission to update account balances when upgrading from versions before 3.88.0.
+
+
+  Full release notes can be found at https://github.com/ghostfolio/ghostfolio/releases/tag/3.93.0
 submitter: BeauAgst
 submission: https://github.com/getumbrel/umbrel-apps/pull/396

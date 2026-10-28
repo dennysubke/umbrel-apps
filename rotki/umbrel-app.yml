@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: rotki
+storage:
+  dataRoot: data
 category: finance
 name: rotki
-version: "1.44.0"
+version: "1.44.2"
 tagline: Portfolio tracking, analytics, accounting and tax reporting
 description: >-
   rotki is an open source portfolio tracking, analytics, accounting and tax reporting tool that protects your privacy. 
@@ -27,19 +29,18 @@ repo: https://github.com/rotki/rotki
 support: https://github.com/rotki/rotki/issues
 port: 8084
 releaseNotes: >-
-  This major release adds new portfolio analysis workflows, expanded exchange/protocol support, and a Docker runtime overhaul.
+  ⚠️ If you use premium sync, update every device to rotki 1.44.2 or later. Older versions cannot restore backups created by this release. Existing old-format backups can still be restored.
 
 
-  Key highlights include:
-    - Added a local MCP server for premium users to analyze rotki data with compatible AI assistants
-    - Redesigned filters, saved views, and history-event actions across the app
-    - Added cross-chain bridge matching, a rebuilt balance snapshot editor, and support for Gate, CoinEx, and Bit2Me
-    - Added new decoders and support for Project X, Frankencoin Savings, Kinetiq, Yearn vesting escrows, Solana staking, Jupiter Lend Earn, Across, LI.FI, and more
-    - History events may need to be redecoded after upgrade; edited events are left untouched
-    - The Docker image now uses a distroless runtime, stops more cleanly, and keeps existing ports, volumes, and environment variables working
+  This release includes important security updates and portfolio tracking improvements:
+    - Updated certificate trust lists to reject certificates affected by the eMudhra key compromise
+    - Stronger encryption and faster compression for premium backups, with clearer upload and restore errors
+    - Added Bonds, ETFs, and Collectibles as locations for manual balances, snapshots, and history events
+    - Improved NFT balances, Hyperliquid history, ZKSync Lite history, and SafeNet withdrawal tracking
+    - Reduced redundant price and blockchain requests to improve loading and avoid rate limits
 
 
-  Full release notes are found at https://github.com/rotki/rotki/releases/tag/v1.44.0
+  Full release notes are found at https://github.com/rotki/rotki/releases/tag/v1.44.2
 gallery:
   - 1.jpg
   - 2.jpg

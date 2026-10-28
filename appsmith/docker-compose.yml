@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
   
   app:
-    image: appsmith/appsmith-ce:v2.3@sha256:6e6ff29dc25f359793a6031f1ec7acf6bbdbb95e36f3a33e366ba4c14a929b3a
+    image: appsmith/appsmith-ce:v2.5.1@sha256:34c0e17ba97cc4c85e1c54ce1fa02c1031d0e6c4aecbe19f8f6daca5a3df53b2
     environment:
       APPSMITH_ENCRYPTION_PASSWORD: ${APP_PASSWORD}
       APPSMITH_ENCRYPTION_SALT: ${APP_PASSWORD}

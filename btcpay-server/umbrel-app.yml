@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: btcpay-server
+storage:
+  dataRoot: data
 category: bitcoin
 name: BTCPay Server
-version: "2.4.3"
+version: "2.4.6"
 tagline: Accept Bitcoin payments with 0 fees & no 3rd party
 description: >-
   BTCPay Server is a payment processor that allows you to receive
@@ -34,36 +36,26 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |-
-  ⚠️ Security update. Updating is recommended for servers shared with many users.
+  ⚠️ Per-invoice email notifications have been removed. Use merchant-controlled email rules instead.
 
-  If you have not already updated to 2.4.2 and rotated your Lightning Node credentials, complete every step below immediately. All BTCPay Server versions before 2.4.2 are affected by a vulnerability that was being actively exploited. An unauthenticated remote attacker could steal the credentials for your Lightning Node and use them to move funds.
+  This release strengthens API-key and store permissions, browser actions, external URLs, and handling of untrusted input. It also includes runtime security updates.
 
-  After updating, rotate your Lightning Node credentials:
+  - Faster recent-invoice lists on large servers.
+  - Clearer wallet filters, import/export controls, and fee-bump actions.
+  - Improved QR-code scanning in dark mode and readable checkout payment-method names.
+  - Persistent diagnostics for plugins disabled after failures.
+  - Fixes for email rules, subscriptions, public forms, and invoice redirect URLs.
+  - Updates NBXplorer to 2.6.21.
 
-  1. On the umbrelOS home screen, right-click BTCPay Server and select **Stop**.
-  2. Right-click Lightning Node and select **Stop**. Wait until both apps have stopped before continuing.
-  3. Open Files and go to `Apps` → `lightning` → `data` → `lnd` → `data` → `chain` → `bitcoin` → `mainnet`.
-  4. In that folder, delete:
+  For users skipping 2.4.5: manually configured connections to other apps on your home network may need updating. Advanced configuration: https://docs.btcpayserver.org/Operators/#allow-private-outbound-destinations
+  Public invoice details are hidden one month after monitoring ends, and manual invoice notification URLs are deprecated in favor of webhooks.
 
-     - Every file whose name ends in `.macaroon`
-     - `macaroons.db`
+  ⚠️ Security reminder for skipped-version updates. If you used BTCPay Server before 2.4.2 and have not rotated your Lightning Node credentials since updating to 2.4.2 or later, update first, then rotate your Lightning Node credentials immediately. Updating alone does not invalidate credentials that may have been exposed.
 
-     The exact `.macaroon` filenames vary between installations. It is normal to have more or fewer of them. Delete all files ending in `.macaroon`.
+  Umbrel credential-rotation instructions: https://github.com/getumbrel/umbrel-apps/blob/ef1400c9571d4f317f0dae38130f42afc98e9af6/btcpay-server/umbrel-app.yml#L43-L65
 
-     ⚠️ Do not delete anything else. Keep `wallet.db`, `channel.backup`, the `chan-backup-archives` folder, and every other file or folder. Never delete `channel.db`.
+  Prior security advisory: https://blog.btcpayserver.org/security-advisory-btcpay-server-2-4-2/
 
-  5. Return to the umbrelOS home screen and click Lightning Node to start it. Wait for it to finish starting.
-  6. Return to the same folder and confirm that new `admin.macaroon` and `macaroons.db` files have appeared.
-  7. Click BTCPay Server to start it.
-  8. Right-click and restart any other Umbrel apps connected to Lightning Node.
-  9. Reconnect external Lightning wallets and services. Their old credentials will no longer work.
-
-  Check your Lightning payments, channel closures, peers, on-chain balance, and channel balance for anything you do not recognize.
-
-  This release includes additional security fixes and updates NBXplorer to 2.6.11.
-
-  Prior security advisory: https://x.com/BtcpayServer/status/2085865561137831938
-
-  Full release notes: https://github.com/btcpayserver/btcpayserver/releases/tag/v2.4.3
+  Full release notes: https://github.com/btcpayserver/btcpayserver/releases/tag/v2.4.6
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel/pull/353

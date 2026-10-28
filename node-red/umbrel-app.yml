@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: node-red
+storage:
+  dataRoot: data
 category: automation
 name: "Node-RED (Bitcoin)"
-version: "5.0.4"
+version: "5.0.9"
 tagline: Wire together the Internet of Things
 description: >-
   Node-RED is a visual programming tool for wiring together hardware
@@ -34,13 +36,10 @@ gallery:
   - 3.jpg
 path: ""
 releaseNotes: >-
-  This maintenance update includes runtime stability fixes and dependency corrections:
-    - Sanitized session messages and improved editor/test handling
-    - Restored the expected JSONata behavior after an upstream regression
-    - Updated supporting dependencies and release maintenance
+  This update adds JavaScript and CSS editing support inside HTML script and style blocks, flow error badges, and drag-to-reorder flows in the Explorer sidebar. It also fixes CSV parsing and output, filtering Date and empty-object payloads, repeated MQTT connections, and several editor issues.
 
 
-  Full release notes can be found at https://github.com/node-red/node-red/releases/tag/5.0.4
+  Full release notes can be found at https://github.com/node-red/node-red/releases/tag/5.0.9
 defaultUsername: umbrel
 defaultPassword: moneyprintergobrrr
 torOnly: false

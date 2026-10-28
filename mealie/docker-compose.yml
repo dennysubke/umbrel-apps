@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   web:
-    image: ghcr.io/mealie-recipes/mealie:v3.24.0@sha256:0b08ac3a9f0a65b8298bcb3a9fcb596f870f92fbefbecd8fffe075fa9b6d2d5d
+    image: ghcr.io/mealie-recipes/mealie:v3.29.0@sha256:78eb28b8776d0bad40c5e605c72b3f4f5976793e491558c7dcbdfc04c835d4bc
     restart: on-failure
     environment:
       # Allow additional user sign-up without token

@@ -1,9 +1,11 @@
 manifestVersion: 1
 id: "zigbee2mqtt"
+storage:
+  dataRoot: data
 name: "Zigbee2MQTT"
 tagline: "Zigbee to MQTT bridge, get rid of your proprietary Zigbee bridges"
 category: "automation"
-version: "2.13.0"
+version: "2.14.2"
 port: 60082
 description: >-
   Allows you to use your Zigbee devices without the vendor's bridge or gateway.
@@ -40,18 +42,17 @@ gallery:
   - 2.jpg
   - 3.jpg
 releaseNotes: >-
-  This update also includes Zigbee2MQTT 2.11.0's security default that disables external extensions and external converters for new installations. Existing users who rely on them can enable `advanced.enable_external_js` if needed.
+  If you're updating from a pre-2.11.0 version, Zigbee2MQTT 2.11.0 changed the security default for new installations to disable external extensions and external converters. Existing users who rely on them can enable `advanced.enable_external_js` if needed.
 
 
   Key highlights include:
-    - Added support for 51 new Zigbee devices
-    - Added a clear cache option when removing devices
-    - Improved Home Assistant discovery for Tuya infrared receivers and emitters
-    - Improved support and behavior for SONOFF, Shelly, Aqara, Tuya, Philips Hue, NodOn, Sunricher, and other devices
-    - Fixed Home Assistant action topics, restart-required flags, group publishing on device leave, and many device definitions/detections
+    - Adds support for 83 more Zigbee devices, including Somfy curtain motors, Philips Hue lights, smart plugs, thermostats, sensors, locks, and controllers
+    - Improves configuration and feature support for Aqara, SONOFF, Tuya, Namron, Schneider Electric, Yale, LEDVANCE, and other devices
+    - Fixes Home Assistant humidity, cover state, action event, retained MQTT message, and naming behavior
+    - Improves Zigbee stack handling for Ember, Z-Stack, and ZBoss adapters
 
 
-  Full release notes can be found at https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.13.0
+  Full release notes can be found at https://github.com/Koenkk/zigbee2mqtt/releases/tag/2.14.2
 dependencies:
   - mosquitto
 path: ""

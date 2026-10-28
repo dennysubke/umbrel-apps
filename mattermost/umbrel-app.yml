@@ -1,9 +1,11 @@
 manifestVersion: 1
 id: mattermost
+storage:
+  dataRoot: data
 name: Mattermost
 tagline: Team Chat, Open Source, Self-Hosted
 category: social
-version: "11.10.0"
+version: "12.0.1"
 port: 8765
 description: >-
   🚉 Mattermost is an open-source platform designed for secure collaboration throughout the software development lifecycle.
@@ -31,14 +33,8 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Mattermost 11.10.0 adds beta rich-text message composition, media gallery layouts for posts with multiple files, silent posts for bots and integrations, and personal access token expiry/rotation notifications.
+  This update includes medium-severity security fixes and fixes a startup issue caused by invalid email settings.
 
 
-  Admins also get new team and attribute-based access control improvements, non-compliant token revocation tools, real-time job status updates in the System Console, and CSV exports that include team memberships.
-
-
-  This release includes no-downtime database schema changes, updates bundled plugins, and fixes issues with web notification privacy, Markdown rendering, search, shared channels, uploads, and more.
-
-
-  Full release notes can be found at https://docs.mattermost.com/product-overview/mattermost-v11-changelog.html#release-v11-10-feature-release
+  Full release notes can be found at https://github.com/mattermost/mattermost/releases/tag/v12.0.1
 path: ""

@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: glasshome
+storage:
+  dataRoot: data
 category: automation
 name: GlassHome
-version: "1.1.3"
+version: "1.4.5"
 tagline: A beautiful, local-first dashboard for Home Assistant
 description: >-
   GlassHome is a local-first dashboard for Home Assistant that you design by
@@ -17,7 +19,7 @@ description: >-
 
   - Area-based dashboards that mirror the rooms in your home
 
-  - Seven theme presets, each with light and dark modes
+  - Nine theme presets, each with light and dark modes
 
   - Community widgets from the GlassHome Hub, gated by a per-widget permission
   prompt (requires the one-time GlassHome Pro purchase)
@@ -33,10 +35,13 @@ description: >-
   authorization. A demo mode with simulated entities lets you explore before
   connecting.
 releaseNotes: >-
-  This update bumps the Widget SDK to 1.11.0 for compatibility with the latest GlassHome widgets.
+  Wall displays and phones paired with Quick-Connect need to sign in again after this update. Their sign-in is now kept out of reach of widgets.
 
 
-  Full release notes can be found at https://glasshome.app/docs/changelog.
+  This update fixes dashboards showing a black screen on older built-in browsers, including the Shelly Wall Display. It also fixes accidental selections when opening menus with Reduce motion enabled, and adds smoother highlights in menus and pickers.
+
+
+  Full release notes can be found at https://github.com/glasshome/homeassistant-addon/blob/main/glasshome/CHANGELOG.md#145.
 developer: GlassHome
 website: https://glasshome.app
 dependencies: []

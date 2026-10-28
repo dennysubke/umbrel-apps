@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: hermes-agent
 category: ai
 name: Hermes Agent
-version: "2026.8.19"
+version: "0.22.5"
 tagline: The AI agent that grows with you
 description: >-
   Hermes Agent is an AI agent that gets better the more you use it by creating its own skills, storing user preferences, and updating its memory.
@@ -38,12 +38,26 @@ path: "/chat"
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Hermes Agent v0.20.5 is a stable patch release that rolls up improvements since v0.20.4, including Bot Mode group-room threads, foldable conversation summaries, blob-face avatars, and PDF/file attachments with drag and drop.
+  Session auto-pruning is opt-in again. Hermes prompts when disk space is low instead of deleting old sessions by default. If you previously enabled sessions.auto_prune, set it to false to keep all session history.
 
 
-  This update also adds keyless web-tier provider rotation, CLI improvements like the fuzzy /model picker and Ctrl+P command palette, runtime stall guards, persistent-memory cron jobs, and desktop performance improvements.
+  Hermes now uses semantic version numbers: v0.22.5 is newer than the previously packaged date-based releases.
 
 
-  Full release notes can be found at https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19
+  Key highlights:
+    - Sign in to Nous with a clearer device-login flow and account confirmation.
+    - Route subagents through pluggable delegation backends, with per-session selection.
+    - Use interactive option pickers in plugin slash commands.
+    - Get a clear message when a chat's working folder is no longer available.
+    - Receive reliability fixes and dependency security updates.
+
+
+  Agent importers, the MCP server, and the Singularity backend now live in plugins.
+
+
+  Chats no longer reset automatically on idle or daily timers; use /new or /reset to start a fresh conversation. Several memory providers and integrations have moved to plugins and are migrated on startup.
+
+
+  Full release notes can be found at https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel-apps/pull/5376

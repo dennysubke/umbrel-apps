@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: airtrail
+storage:
+  dataRoot: data
 category: files
 name: AirTrail
-version: "3.12.0"
+version: "3.13.1"
 tagline: A modern, open-source personal flight tracking system
 description: >-
   A web application that allows users to track their flights and view their flight history.
@@ -24,10 +26,11 @@ description: >-
   
   - **Import Flights**: Import flights from various sources including MyFlightRadar24, App in the Air and JetLog.
 releaseNotes: >-
-  This update adds individual flight detail panes, altitude-colored uploaded flight tracks, readsb trace JSON and Miles & More importers, improved flight list grouping, custom passenger field enhancements, and better AeroDataBox conflict handling.
+  This update refreshes AirTrail's Node.js runtime to address security vulnerabilities. There are no changes to AirTrail's features.
 
 
-  It also automatically migrates existing seat and flight-reason data to the reworked passenger model, tightens AirTrail backup import permissions, fixes a custom airline icon upload path traversal issue, and includes several map, import, and PWA fixes.
+  Full release notes: https://github.com/johanohly/AirTrail/releases/tag/v3.13.1
+
 developer: Johan Ohly
 website: https://airtrail.johan.ohly.dk
 dependencies: []

@@ -3,7 +3,7 @@ id: appsmith
 name: Appsmith
 tagline: Platform to build admin panels, internal tools, and dashboards
 category: developer
-version: "v2.3"
+version: "v2.5.1"
 port: 8654
 description: >-
   Appsmith is an open-source, low-code development platform designed to help developers and teams build internal tools and business applications quickly and efficiently. Whether you need dashboards, admin panels, database GUIs, or approval workflows, Appsmith provides a powerful yet flexible environment to create robust applications without the overhead of traditional software development.
@@ -34,16 +34,23 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies: []
 releaseNotes: >-
-  Appsmith 2.3 keeps the automatic migration for older Umbrel installs, so Appsmith may take some time to come back online while the migration finishes. Please leave Appsmith running until it has started.
+  ⚠️ If you have manually customized docker.env, replace shell expressions with resolved literal values before updating and move JVM options to your container environment. Preserve your encryption password and salt. Generated defaults and Admin Settings values need no changes.
 
-  Appsmith AI datasource connections are being retired: after upgrading, new Appsmith AI datasources and queries can no longer be created, while existing ones continue to work until September 30, 2026.
 
-  Highlights include:
-    - Added Ask AI to Community Edition and AI Copilot support for Custom Widgets.
-    - Added the Card widget, Button label styling options, widget tab-order controls, and configurable HTML language attributes.
-    - Fixed multiple security issues covering datasource authorization, Git imports, permission group boundaries, anonymous tenant responses, login redirects, frame ancestors, SMTP TLS verification, rate limiting, and dependency CVEs.
-    - Improved Git error messages and Git import behavior.
-    - Fixed several UI and widget issues, including application theme permissions, copy-to-application scrolling, table menu button widths, and link handling in Text widgets.
+  This update includes security fixes, more reliable JavaScript actions, improved editor support for browser APIs, and fixes for phone-input country flags and required-field markers. SMTP connections now enforce restricted-host rules, and self-serve signup is limited to 20 requests per client IP per day.
 
-  Full release notes can be found at https://github.com/appsmithorg/appsmith/releases/tag/v2.3
+
+  When upgrading from before 2.5, Elasticsearch queries with dynamic values or paths may need changes. Review the full release notes before updating.
+
+
+  Other changes to be aware of:
+    - Saved data connections keep their credentials unless you change the connection settings. After a change, re-enter the connection's credentials or reconnect its OAuth account.
+    - Opening a Git-connected app in the editor may create a one-time automatic commit. Updated Git repositories and new exports cannot be used with older Appsmith versions that only support the previous format.
+    - Appsmith AI was discontinued on September 30, 2026. Its queries have stopped working regardless of this update. Switch those queries to a direct connection to OpenAI, Anthropic, or Google AI.
+
+
+  If you are updating from a version older than 2.0, startup may take longer while your data is migrated. Leave Appsmith running until it finishes.
+
+
+  Full release notes can be found at https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1
 path: ""

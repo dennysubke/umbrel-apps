@@ -7,13 +7,12 @@ services:
       APP_PORT: 3001
   
   web:
-    image: shahanafarooqui/rtl:v0.15.11@sha256:3f999ba52d4dfa35b704fde5b14ced26aa03bc92978c2d349ab963ba10c6045a
+    image: shahanafarooqui/rtl:v0.15.15@sha256:fdf3c8dc5843eccd556e475265487b2be24478727cd160e51127ea65c2a3bbb6
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
     volumes:
       - ${APP_DATA_DIR}/rtl:/data
-      - ${APP_DATA_DIR}/boltz:/boltz:ro
       - ${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro
       - ${APP_BITCOIN_DATA_DIR}:/bitcoin:ro
     entrypoint: /data/entrypoint.sh
@@ -31,25 +30,3 @@ services:
         LN_SERVER_URL: "https://$APP_LIGHTNING_NODE_IP:$APP_LIGHTNING_NODE_REST_PORT"
         MACAROON_PATH: "/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK"
         CONFIG_PATH: "/lnd/umbrel-lnd.conf"
-
-        # Boltz
-        BOLTZ_SERVER_URL: "https://ride-the-lightning_boltz_1:9003"
-        BOLTZ_MACAROON_PATH: "/boltz/.boltz-lnd/macaroons"
-
-  boltz:
-    image: boltz/boltz-client:2.11.3@sha256:87ebbd43e75157a86dbe7a6eba897b11edac4b240e3169931d1a1d6821c5e347
-    user: "1000:1000"
-    restart: "on-failure"
-    stop_grace_period: "1m"
-    environment:
-      HOME: "/data"
-    volumes:
-      - "${APP_DATA_DIR}/boltz:/data"
-      - "${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro"
-    command:
-      - --datadir=/data/.boltz-lnd
-      - --lnd.host="$APP_LIGHTNING_NODE_IP"
-      - --lnd.macaroon="/lnd/data/chain/bitcoin/$APP_BITCOIN_NETWORK/admin.macaroon"
-      - --lnd.certificate="/lnd/tls.cert"
-      - --rpc.rest.host="0.0.0.0"
-      - --rpc.rest.port="9003"

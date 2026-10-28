@@ -1,9 +1,11 @@
 manifestVersion: 1
 id: grafana
+storage:
+  dataRoot: data
 name: Grafana
 tagline: The open-source platform for monitoring and observability
 category: networking
-version: "13.2.0"
+version: "13.3.0"
 port: 3030
 description: >-
   Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data-driven culture:
@@ -38,17 +40,19 @@ gallery:
 releaseNotes: >-
   ⚠️ If you're updating from before Grafana 13.1, Prometheus Azure/SigV4 authentication and the Zipkin core plugin were removed from Grafana core. Review the upstream notes if you use those integrations.
 
+  Grafana 13.3 brings security fixes and improvements to dashboards, alerting, and Git Sync.
 
-  Grafana 13.2.0 includes a security fix for CVE-2026-17183.
+  - Add subtitles to panels and use the automatic grid layout by default.
 
+  - Preserve dashboard tags, variable values, and time settings more reliably.
 
-  This release adds alerting import tools and improves dashboard provisioning/Git Sync workflows.
+  - Import Mimir Alertmanager configuration files and see external Alertmanager sync health.
 
+  - Improve Git Sync folder handling, previews, and recovery when branches are deleted.
 
-  It also fixes dashboard, logs table, PostgreSQL, transformations, and alerting issues.
+  - Fix table sizing and log and trace navigation.
 
-
-  Full release notes can be found at https://github.com/grafana/grafana/releases/tag/v13.2.0
+  Full release notes can be found at https://github.com/grafana/grafana/releases/tag/v13.3.0
 submitter: phelipebf
 submission: https://github.com/getumbrel/umbrel-apps/pull/1664
 dependencies: []

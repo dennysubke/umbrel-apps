@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: jupyterlab
+storage:
+  dataRoot: data
 category: developer
 name: JupyterLab
-version: "v4.6.3"
+version: "v4.6.4"
 tagline: Next-generation web interface for interactive computing and data science
 description: >-
   JupyterLab is a next-generation web-based user interface for Project Jupyter. 
@@ -21,14 +23,16 @@ description: >-
 
 
   JupyterLab uses the same notebook document format as the classic Jupyter Notebook.
+permissions:
+  - GPU
 releaseNotes: >-
-  This release includes notebook and workflow fixes for JupyterLab:
-    - Fixes Shift-click cell selection after selecting editor text.
-    - Fixes notebook tools prompt blinking and prevents a related memory leak.
-    - Improves variable inspection, document autocomplete, toolbar item positioning, and kernel status reporting.
+  This security update fixes multiple vulnerabilities in JupyterLab, including one high-severity advisory.
 
 
-  Full release notes can be found at https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.3
+  It also improves path resolution performance, search startup behavior, extension manager package inspection, large notebook resizing, image context actions, and preservation of kernelspec metadata when a spec is unavailable.
+
+
+  Full release notes can be found at https://github.com/jupyterlab/jupyterlab/releases/tag/v4.6.4
 developer: jupyterlab
 website: https://jupyterlab.readthedocs.io/en/latest/
 repo: https://github.com/jupyterlab/jupyterlab

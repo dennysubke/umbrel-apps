@@ -1,8 +1,10 @@
 manifestVersion: 1.1
 id: home-assistant
+storage:
+  dataRoot: data
 category: automation
 name: Home Assistant
-version: "2026.8.3"
+version: "2026.10.4"
 tagline: Home automation that puts local control & privacy first
 description: >-
   Open source home automation that puts local control and privacy
@@ -40,15 +42,11 @@ torOnly: false
 permissions:
   - STORAGE_DOWNLOADS
 releaseNotes: >-
-  This patch release includes fixes and improvements across Home Assistant integrations and media handling.
+  This patch release includes bug fixes and improvements across multiple integrations:
 
 
   Key fixes and improvements:
-    - Added album artwork and a play button when opening Sonos music library albums
-    - Fixed Signal Messenger self-notifications and a Vizio media player crash when volume settings are unavailable
-    - Improved Shelly Wall Display and floor-heating status handling
-    - Improved device tracking for DLNA DMR, FRITZ!Box, Netgear, UniFi, and Wake-on-LAN integrations
-    - Updated integration libraries for Reolink, Enphase Envoy, Volvo, LG webOS TV, calendars, holidays, and Google Health
+    - Improved compatibility with services that send large HTTP response headers
 
 
   Full release notes are available at https://github.com/home-assistant/core/releases/

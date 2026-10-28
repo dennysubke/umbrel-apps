@@ -1,9 +1,11 @@
 manifestVersion: 1
 id: trip
+storage:
+  dataRoot: data
 name: Trip
 tagline: Minimalist Map Tracker and Trip Planner
 category: files
-version: "1.48.0"
+version: "1.50.1"
 port: 8980
 description: >-
   🗺️ TRIP is a self-hostable minimalist Map tracker and Trip planner to visualize your points of interest (POI) and organize your next adventure details.
@@ -23,11 +25,9 @@ support: https://github.com/itskovacs/trip/issues
 submitter: itskovacs
 submission: https://github.com/getumbrel/umbrel-apps/pull/3830
 releaseNotes: >-
-  This update adds support for multiple checklists and packing lists, checklist-item notifications through Apprise, detailed places recap print exports, and Italian translations.
+  This update adds a back button to the admin dialog and fixes issues with SQLModel updates.
 
-  It also includes minor UI improvements and fixes duplicate places in places recap print exports.
-
-  Full release notes can be found at https://github.com/itskovacs/trip/releases/tag/1.48.0
+  Full release notes can be found at https://github.com/itskovacs/trip/releases/tag/1.50.1
 dependencies: []
 path: ""
 defaultUsername: ""

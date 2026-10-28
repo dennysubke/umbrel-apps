@@ -7,7 +7,7 @@ services:
       APP_PORT: 8000
 
   app:
-    image: ghcr.io/readur/readur:2.9.2@sha256:bb6356cf930faac65aa461f323454b678a42c7c6688b59d69f3a24479d7d7a6a
+    image: ghcr.io/readur/readur:3.1.0@sha256:8d8fdacffc8a60f74fe64b204a9012e15a4f5c5d96caf26b17ca5fd55ffa667c
     user: "1000:1000"
     restart: on-failure
     environment:

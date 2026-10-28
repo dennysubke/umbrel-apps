@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: silo_server_1
+      APP_PORT: 9001
+
+  server:
+    image: pgsty/silo:RELEASE.2026-10-26T00-00-00Z@sha256:7bb2aff6b89efe1cb1303c10fc21d579447434ed06649ac9ec05a5e2dbf30ad7
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    command: server /data --console-address :9001
+    environment:
+      MINIO_ROOT_USER: umbrel
+      MINIO_ROOT_PASSWORD: ${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/objects:/data
+    ports:
+      # S3 clients authenticate with Silo access keys, independently of app_proxy.
+      - "9131:9000"

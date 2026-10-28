@@ -7,7 +7,7 @@ services:
       APP_PORT: 38080
 
   daemon:
-    image: ghcr.io/mmalmi/nostr-vpn-umbrel:v4.1.8@sha256:fd0a9184e94c77b749aa632c6538daf2a3f7206b21dffd9e21a89954ddff8568
+    image: ghcr.io/mmalmi/nostr-vpn-umbrel:v4.1.18@sha256:f9a80cd4dc51f33a7e48ac450698c0b9cf47f0a554275ef070a27e2e89d2fe36
     restart: on-failure
     stop_grace_period: 1m
     network_mode: "host"
@@ -29,7 +29,7 @@ services:
       - ${APP_DATA_DIR}/data:/data
 
   web:
-    image: ghcr.io/mmalmi/nostr-vpn-umbrel:v4.1.8@sha256:fd0a9184e94c77b749aa632c6538daf2a3f7206b21dffd9e21a89954ddff8568
+    image: ghcr.io/mmalmi/nostr-vpn-umbrel:v4.1.18@sha256:f9a80cd4dc51f33a7e48ac450698c0b9cf47f0a554275ef070a27e2e89d2fe36
     restart: on-failure
     stop_grace_period: 1m
     depends_on:

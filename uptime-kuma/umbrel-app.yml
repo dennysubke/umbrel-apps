@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: uptime-kuma
+storage:
+  dataRoot: data
 category: networking
 name: Uptime Kuma
-version: "2.5.3"
+version: "2.5.8"
 tagline: Self-hosted uptime monitoring tool
 description: >
   Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
@@ -39,16 +41,12 @@ gallery:
 path: ""
 defaultPassword: ""
 releaseNotes: >
-  New features:
-    - Added new SMS Gateway, ClickUp, TurboSMTP, BearSMS, Pinglet, Milky, and OpenWA notification providers
+  ⚠️ TLS support has been removed from TCP Port monitors. Existing SSL or STARTTLS monitors become plain TCP monitors and no longer check TLS. Review any affected monitors after updating.
 
 
-  Bug fixes:
-    - Fixed SQLite validation for the analytics type setting
-    - Fixed RADIUS monitors so Access-Challenge responses are treated as successful
-    - Fixed the 2.5.x release version metadata
+  This update fixes an administrator-only remote code execution vulnerability and improves Docker connection verification.
 
 
-  Full release notes can be found at https://github.com/louislam/uptime-kuma/releases/tag/2.5.3
+  Full release notes can be found at https://github.com/louislam/uptime-kuma/releases/tag/2.5.8
 submitter: Philipp Haussleiter
 submission: https://github.com/getumbrel/umbrel/pull/1148

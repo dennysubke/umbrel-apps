@@ -4,7 +4,7 @@ implements:
   - electrs
 category: bitcoin
 name: ElectrumX
-version: "1.16.0-patch.3"
+version: "1.16.0-patch.5"
 tagline: A lightweight Electrum server
 description: >
   Run your personal Electrum server and connect your Electrum-compatible wallet,
@@ -30,13 +30,14 @@ gallery:
   - 3.jpg
 path: ""
 defaultPassword: ""
-releaseNotes: >
-  This security update upgrades the bundled Tor sidecar to 0.4.9.11, restoring Tor connectivity and including the latest Tor security fixes. The primary app version is unchanged.
+releaseNotes: >-
+  This update fixes the Local Network QR code so it uses your local address. It also refreshes the dashboard’s runtime and dependencies.
 
 
-  This update adds support for Backups in umbrelOS 1.5.
+  It includes ElectrumX 1.16.0, unchanged from the previous app release.
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel-apps/pull/1813
 backupIgnore:
   - data/electrumx/meta
   - data/electrumx/hist
+  - data/electrumx/utxo

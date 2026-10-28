@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   server:
-    image: linuxserver/grocy:4.6.0@sha256:971fb0b4dac073652915c3c90e540a97d17075f40e2998d2850351c2dc9f1305
+    image: linuxserver/grocy:4.7.1@sha256:d63bffe9afb2ef1a23fa7ce0749cdaeba9c169fb644b16eed270884a1b2f4ac9
     restart: on-failure
     environment:
       - PUID=1000

@@ -1,9 +1,11 @@
 manifestVersion: 1
 id: kimai
+storage:
+  dataRoot: data
 name: Kimai
 tagline: Time tracking for project-driven teams
 category: files
-version: "2.65.0"
+version: "2.71.0"
 port: 8734
 description: >-
   🕒 Kimai is a self-hosted, open-source time-tracking application designed to capture and manage all your projects and tasks with minimal effort.
@@ -31,15 +33,11 @@ defaultPassword: "changeme"
 deterministicPassword: false
 dependencies: []
 releaseNotes: >-
-  This update includes security hardening for activity/team permissions in timesheet listings and team management API routes.
+  ⚠️ Legacy API passwords are no longer supported. Update integrations to use API access tokens before upgrading.
 
 
-  Other improvements include:
-    - Improved timesheet list performance by pre-fetching team information
-    - Improved the default team creation flow
-    - Added Serbian translations and updated other translations
-    - Dependency and maintenance updates
+  This update also fixes permission checks when setting or restarting time entries through the API and improves how user roles are stored.
 
 
-  For full release notes, visit https://github.com/kimai/kimai/releases/tag/2.65.0
+  For full release notes, visit https://github.com/kimai/kimai/releases/tag/2.71.0
 path: ""

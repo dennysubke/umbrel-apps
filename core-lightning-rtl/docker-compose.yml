@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   web:
-    image: shahanafarooqui/rtl:v0.15.11@sha256:3f999ba52d4dfa35b704fde5b14ced26aa03bc92978c2d349ab963ba10c6045a
+    image: shahanafarooqui/rtl:v0.15.16@sha256:0b44c4e581257b52d60722d92c62a1f47a104e4c703740bdcfccc38c80bc83dc
     restart: on-failure
     environment:
       PORT: 3000
@@ -20,27 +20,6 @@ services:
       DB_DIRECTORY_PATH: "/data"
       RTL_COOKIE_PATH: "/data/.cookie"
       BLOCK_EXPLORER_URL: "${APP_CORE_RTL_BLOCK_EXPLORER_URL}"
-      # Boltz
-      BOLTZ_SERVER_URL: "https://core-lightning-rtl_boltz_1:9003"
-      BOLTZ_MACAROON_PATH: "/boltz/.boltz/macaroons"
     volumes:
       - "${APP_DATA_DIR}/data/rtl:/data"
       - "${APP_CORE_LIGHTNING_DATA_DIR}:/root/.lightning:ro"
-      - "${APP_DATA_DIR}/data/boltz:/boltz:ro"
-
-  boltz:
-    image: boltz/boltz-client:2.11.3@sha256:87ebbd43e75157a86dbe7a6eba897b11edac4b240e3169931d1a1d6821c5e347
-    restart: "on-failure"
-    stop_grace_period: "1m"
-    environment:
-      HOME: "/data"
-    volumes:
-      - "${APP_DATA_DIR}/data/boltz:/data"
-      - "${APP_CORE_LIGHTNING_DATA_DIR}:/cln:ro"
-    command:
-      - --network=$APP_BITCOIN_NETWORK
-      - --cln.datadir=/cln
-      - --cln.host=$APP_CORE_LIGHTNING_DAEMON_IP
-      - --cln.port=$APP_CORE_LIGHTNING_DAEMON_GRPC_PORT
-      - --rpc.rest.host="0.0.0.0"
-      - --rpc.rest.port="9003"

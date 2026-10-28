@@ -2,18 +2,19 @@ manifestVersion: 1.1
 id: librespeed
 category: networking
 name: LibreSpeed
-version: "6.2.1"
+version: "6.3.1"
 tagline: Free and open source speedtest
 description: >-
   Free and open source speedtest. Measure internet speeds between your devices and your Umbrel.
 releaseNotes: >-
   What's new in this release:
-    - Fixed inflated upload-speed results when an upload request receives an HTTP error response
-    - Fixed the modern frontend asset layout so deployments can serve the repository without rearranging files
-    - Improved Docker, installation, and design-switch documentation for the current deployment layout
+    - Keeps the speed-test gauge visible when starting a test on mobile devices
+    - Fixes automatic server selection when mixing HTTP and HTTPS servers
+    - Ensures changes to the selected interface design are reflected without stale browser caches
+    - Disables unused PHP session upload progress as a security precaution
 
 
-  Full release notes are found at: https://github.com/librespeed/speedtest/releases/tag/v6.2.1
+  Full release notes are found at: https://github.com/librespeed/speedtest/releases/tag/v6.3.1
 developer: LibreSpeed
 website: https://librespeed.org/
 dependencies: []

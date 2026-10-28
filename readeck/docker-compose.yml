@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "true"
   
   web:
-    image: codeberg.org/readeck/readeck:0.23.1@sha256:d1dde9c0a7292fffe4170ec410aeffb03d67693b41f954918aad8dc3dd70786b
+    image: codeberg.org/readeck/readeck:0.23.5@sha256:17dea468f4f713930338062f58a3a5e0d04e37d2961ddb827792e223f3db91b4
     user: 1000:1000
     restart: on-failure
     stop_grace_period: 1m

@@ -16,7 +16,7 @@ services:
       APP_PORT: 8091
 
   server:
-    image: ghcr.io/bisq-network/bisq2-api:2.1.12.0@sha256:beba2f2db5aefca0f4b8d49285b105cb0b29d0eb0ed0f8136712aace0e167906
+    image: ghcr.io/bisq-network/bisq2-api:2.1.14.0@sha256:5b028dbe98353fae10d49d8d69f864a7ef9d294647d868c127f66c9f6a4f0a64
     restart: on-failure
     stop_grace_period: 1m
     mem_limit: 2g
@@ -24,7 +24,7 @@ services:
       - ${APP_DATA_DIR}/data:/data
 
   web:
-    image: ghcr.io/bisq-network/bisq2-api-web-ui:2.1.12.0@sha256:d64c335cc21c69dc8d62f360e5d29ab974d0949f320ba1658cab0a4d5cc7f310
+    image: ghcr.io/bisq-network/bisq2-api-web-ui:2.1.14.0@sha256:3e010e4ca8031d07c64a9b1459f603d5d2db6953edfddad95940c4a5fc68a950
     restart: on-failure
     network_mode: "service:server"
     volumes:

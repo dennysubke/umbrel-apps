@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: yuvomi
+storage:
+  dataRoot: data
 category: files
 name: Yuvomi
-version: "2.44.0"
+version: "2.81.2"
 tagline: Self-hosted family planner — calendar, tasks, shopping, meals & budget
 description: >-
   Yuvomi is a self-hosted, privacy-focused family planner that bundles everything
@@ -51,39 +53,24 @@ description: >-
   Open Yuvomi from your Umbrel dashboard and create the first account — that
   account becomes the family admin and can invite the rest of the household.
 releaseNotes: >-
-  The Tasks module now keeps a history of what was completed. Until now a task
-  simply carried the state "done", and nothing recorded when that happened or
-  who did it - so questions like "what did I get through today", "when did we
-  last clean the bathroom" or "who took the bins out" had no answer anywhere. A
-  third view sits beside List and Board: what was ticked off, grouped by day,
-  newest first, with the household member and the time. You can narrow it to one
-  person, and tapping an entry opens the task itself.
+  This is a security release, and it changes nothing about how Yuvomi looks or
+  works day to day. It completes the Web Push fix from 2.81.1: a specially
+  crafted push address could still get past the new check and make the server
+  connect into your own network. Push addresses are now checked the same way the
+  push library reads them.
 
 
-  A repeating task also shows when it was last done, going back through the
-  whole series rather than just the copy currently open. That is the question a
-  weekly chore actually raises, and it is the one the old "done" flag could
-  never answer, because completing a repeating task creates a fresh copy each
-  time.
+  Push notifications to phones and browsers keep working as before. A stored
+  push subscription with an unusual address is removed on its next delivery,
+  like an expired one.
 
 
-  The history starts empty, and that is expected. Recording begins with this
-  update - what your household ticked off before it was never written down
-  anywhere, so there is nothing to show yet. It fills up from the first task you
-  complete after updating.
-
-
-  The list respects who may see what, exactly as the task list does. A task kept
-  private stays out of everyone else's history, including after the fact: set a
-  task to private later, and it disappears from the history too.
-
-
-  Nothing needs configuring and there is nothing to do after the update - the
-  new table is created automatically on first start.
+  Nothing changes in the database with this update, so it is a plain container
+  swap with no migration to wait for.
 
 
   Full release notes are available at
-  https://github.com/ulsklyc/yuvomi/releases/tag/v2.44.0
+  https://github.com/ulsklyc/yuvomi/releases/tag/v2.81.2
 backupIgnore:
   - data/app/yuvomi.db.plaintext-backup*
   - data/backups/*.db

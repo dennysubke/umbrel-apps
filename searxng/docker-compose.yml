@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: ghcr.io/searxng/searxng:2026.8.22-9fea41204@sha256:11a9b34cdc0b1ec2b991470a2762ecb5a1a531898289fb51dcd015260450729e
+    image: ghcr.io/searxng/searxng:2026.10.27-cb74e7f81@sha256:9dc6d0472930d981f5955f0379e107257383be2d81897b25df89cf37d789f152
     container_name: searxng-web # Avoid underscores in hostname (Werkzeug rejects them)
     restart: on-failure
     environment:

@@ -1,8 +1,10 @@
 manifestVersion: 1
 id: nocodb
+storage:
+  dataRoot: data
 category: files
 name: NocoDB
-version: "2026.08.1"
+version: "2026.10.0"
 tagline: No-code platform for database management, self-hosted Airtable alternative
 description: >-
   NocoDB is an open-source platform that converts databases into smart, collaborative spreadsheets. It enables users to create no-code applications on top of databases like MySQL, PostgreSQL, SQLite, and even Airtable-like interfaces on existing data structures. 
@@ -30,16 +32,22 @@ description: >-
 
   🛡️ Permissions & Roles: NocoDB supports user roles, access controls, and permissions, making it suitable for team use.
 releaseNotes: >-
-  New features and improvements in this release:
-    - Adds realtime presence in Grid views so collaborators can see where others are working
-    - Adds folders for grouping tables, documents, dashboards, and views
-    - Adds support for freezing multiple fields in Grid views
-    - Improves Interfaces with copied view settings, field sizing, dashboard permissions, and layout polish
-    - Improves API support for v3 records upsert link fields and currency-field schema details
-    - Fixes two-factor sign-in in the installed app, scheduled snapshot naming, rich text previews, AI response recovery, API field updates, link-field permissions, and interface permissions
+  This update improves grids, formulas, workflows, and sign-in, and includes security hardening.
 
 
-  Full release notes can be found at https://github.com/nocodb/nocodb/releases/tag/2026.08.1
+  New features and improvements:
+    - Replay past workflow runs step by step without running them again
+    - Connect supported AI tools through MCP by signing in instead of copying a token
+    - Display text formula results as colored single-select values
+    - Group grids up to five levels deep and freeze more columns
+    - Improved mobile grids, live updates, filters, linked records, and attachments
+    - Redesigned sign-in screens; Interfaces are now called classic apps, with existing pages and access preserved
+
+
+  Webhooks and uploads by URL now reject private network addresses. Existing integrations targeting local services may need adjustment. Some MCP response formats have changed; the REST v3 API is unchanged.
+
+
+  Full release notes can be found at https://github.com/nocodb/nocodb/releases/tag/2026.10.0
 developer: NocoDB Inc.
 website: https://nocodb.com
 dependencies: []

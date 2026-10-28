@@ -1,8 +1,10 @@
 manifestVersion: 1.1
 id: gitea
+storage:
+  dataRoot: data
 category: developer
 name: Gitea
-version: "1.27.2"
+version: "28.2.0"
 tagline: A painless self-hosted Git service
 description: >-
   Gitea is a painless self-hosted Git service. It is similar to
@@ -34,13 +36,13 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Gitea 1.27.2 is a follow-up to the recent Gitea 1.27 major update. If you're updating from a pre-1.27 version, note that Gitea 1.27 includes breaking changes for reusable workflows and adds Content-Security-Policy script nonces, which may affect custom integrations that rely on old workflow behavior or inline scripts.
+  Gitea 28.2.0 adds built-in OAuth support for the Gitea VS Code extension and improves custom watch notifications.
 
 
-  If you're already on Gitea 1.27, this update fixes security issues around collaborator access, HTTP signatures, reusable workflow resolution, WebAuthn verification, and markup rendering. It also includes fixes for Actions workflows and reruns, LFS uploads, package handling, archive downloads, repository migrations, and UI rendering.
+  This release fixes pull request merge detection and review comments, cancelled and scheduled Actions workflows, npm package downloads, code copying, and sign-in compatibility. It also includes security fixes for OpenID verification, Git LFS paths, incoming email, and request validation.
 
 
-  Full release notes: https://github.com/go-gitea/gitea/releases/tag/v1.27.2
+  Full release notes: https://github.com/go-gitea/gitea/releases/tag/v28.2.0
 torOnly: false
 submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel/commit/d62e00353917143a3a10d3b376859f51b665d150

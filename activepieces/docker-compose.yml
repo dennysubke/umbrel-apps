@@ -9,7 +9,7 @@ services:
   app:
     ## does not work rootless as of yet
     #user: "1000:1000"
-    image: ghcr.io/activepieces/activepieces:0.88.4@sha256:c9dc95bd13c216f75bb031d87f80af22d371e952e004b6080023c3e424d143b3
+    image: ghcr.io/activepieces/activepieces:0.92.3@sha256:26daa5e1807f7aac3c04a9faa9f9503b36c5d8577bc258523d03f0b74f293bb1
     restart: on-failure
     environment:
       AP_ENGINE_EXECUTABLE_PATH: dist/packages/engine/main.js
